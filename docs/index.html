@@ -1,0 +1,40 @@
+<html>
+<head>
+
+</head>
+
+<body>
+    <ul id="result" >
+        
+    </ul>
+    <input id="massInput" onchange="Send()" type="number" />
+    <p>kg</p>
+    
+    <script>
+        var planets = ["Mercury","Venus","Earth", "Mars", "Jupiter", "Saturn","Uranus", "Neptune", "Pluto"];
+        var gravity = [3.59, 8.87, 9.81, 1.62, 3.77, 25.95, 11.08, 10.67, 14.07, 0.42];
+        
+        var list = document.getElementById("result");
+        
+        function Send()
+        {
+            list.innerHTML = null;
+            var mass =  document.getElementById("massInput").value;
+            
+            if(mass!=="")
+            {
+                var mass = parseFloat(mass);
+                for(var i =0;i<planets.length;i++)
+                {
+                    var weight = Math.round(gravity[i]*mass);
+                    var entry = document.createElement('li');
+                    entry.appendChild(document.createTextNode(planets[i]+": "+ weight + " N" ));
+                    list.appendChild(entry);
+                }
+            }
+                
+        }
+    </script>
+</body>
+
+</html>
