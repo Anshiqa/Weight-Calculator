@@ -1,0 +1,79 @@
+
+body
+{
+    background-image: url("https://preview.ibb.co/gDnqoc/201447.jpg");
+
+}
+
+#lines 
+{
+    width: 1250;
+    margin: auto;
+}
+#massInput 
+    {
+    display: inline-block;
+    text-align: center;
+    font-family: Avenir;
+    width: 60px;
+    height: 40px;
+    position: relative; 
+        left: 160;
+        top: 54px;
+        font-size: 20px;
+
+      }
+#ask
+    {
+        font-family: Avenir;
+        font-size: 20px; 
+        color: aqua;
+    }
+#massunit
+    {
+        font-family: Avenir;
+        font-size: 20px;
+        position: relative;
+        left: 230px;
+        top: -45px;
+        color: aqua;
+
+    }
+
+#input 
+    {
+    margin: auto;
+    width: 260px;
+    }
+
+#result
+    {
+    list-style-type: none;
+    margin: auto;
+    width: 1220px;
+    padding: 0;
+    overflow: hidden;
+        color: whitesmoke
+        
+    }
+
+li {
+    float: left;
+    font-family: Avenir;
+    padding: 15px;
+    align-content: center;
+    
+}      
+
+#descript 
+    {
+        font-family: Avenir;
+        Font-size: 15px;
+        color: grey;
+        font-style: italic;
+        width: 550px;
+        text-align: center;
+        margin: auto;
+        line-height: 30px;
+        color: aliceblue
+    }
