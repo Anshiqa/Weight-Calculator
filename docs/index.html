@@ -6,22 +6,31 @@
 </head>
 
 <body background="file:///Users/Agrawal/Downloads/jeremy-thomas-99326-unsplash.jpg" > 
+      
+   
     
-    
-     <p id="lines"> <img src="https://i.imgur.com/jPzlApf.png"/> 
-    </p>
-    
-    <ul id="result" >
-       
-    </ul>
-       
      
-    <div id=input>
-    <input id="massInput" onchange="Send()" type="number" />
-    <p id=ask>Input your mass:</p>
-    <p id=massunit>kg</p>
-    </div>
+    <p id="lines" >  <img src="https://i.imgur.com/jPzlApf.png"/> 
+        </p>  
+    
+    <table>
+        <tr> <td id=find >Find out your weight on the different planets! </td> 
+        </tr>
+    
+ 
         
+        <tr> <td id=ask> Input your mass: </td> </tr>
+       
+        <tr> <td id=massunit > <input id="massInput" onchange="Send()" type="number" /> kg </td>  </tr>
+        
+        <tr> <td id=descript>  The number measured on the weighing scale is actually your mass! Now find out what your weight actually is. P.S. It's different on all the planets! </td> </tr>
+        
+        <tr> <td> <ul id="result" > </ul> </td>  </tr>
+        
+    
+    </table>
+    
+    
     <script>
         var planets = ["Mercury","Venus","Earth", "Mars", "Jupiter", "Saturn","Uranus", "Neptune", "Pluto"];
         var gravity = [3.59, 8.87, 9.81, 1.62, 3.77, 25.95, 11.08, 10.67, 14.07, 0.42];
@@ -47,7 +56,7 @@
                 
         }
     </script>
- <p id=descript>The number measured on the weighing scale is actually your mass! Now find out what your weight actually is. P.S. It's different on all the planets!</p>
+ 
 </body>
 
 </html>

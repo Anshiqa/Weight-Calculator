@@ -5,22 +5,39 @@ body
 
 }
 
+table
+{
+    text-align: center;
+    width: 100%;
+    border-spacing: 20px;
+    padding: 10px;
+    
+}
+
+
+#find
+{
+    color: white;
+    font-family: Avenir;
+    font-size: 20px;
+    width: fixed;
+    text-align: center;
+    
+}
+
 #lines 
 {
     width: 1250;
-    margin: auto;
+    margin-top: 
 }
 #massInput 
     {
     display: inline-block;
     text-align: center;
     font-family: Avenir;
-    width: 60px;
+    width: 80px;
     height: 40px;
-    position: relative; 
-        left: 160;
-        top: 54px;
-        font-size: 20px;
+    font-size: 20px;
 
       }
 #ask
@@ -28,52 +45,47 @@ body
         font-family: Avenir;
         font-size: 20px; 
         color: aqua;
+        width: 200px;
+        
+        
     }
 #massunit
     {
-        font-family: Avenir;
-        font-size: 20px;
-        position: relative;
-        left: 230px;
-        top: -45px;
+       font-family: Avenir;
+        font-size: 20px; 
         color: aqua;
-
-    }
-
-#input 
-    {
-    margin: auto;
-    width: 260px;
+        width: 200px;
+        margin-left:33%;
+        
+        
     }
 
 #result
     {
     list-style-type: none;
-    margin: auto;
-    width: 1220px;
-    padding: 0;
     overflow: hidden;
-        color: whitesmoke
+        text-align: center;
+           
+
+        
         
     }
 
 li {
-    float: left;
     font-family: Avenir;
-    padding: 15px;
-    align-content: center;
+    padding: 10px;
+    background-color: rgb(233,198,249, 0.5);
+        color: black;
+             border: 1px solid black;
     
 }      
 
 #descript 
     {
         font-family: Avenir;
-        Font-size: 15px;
+        Font-size: 18px;
         color: grey;
         font-style: italic;
-        width: 550px;
         text-align: center;
-        margin: auto;
-        line-height: 30px;
-        color: aliceblue
+        color: aliceblue;        
     }
