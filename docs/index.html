@@ -6,34 +6,83 @@
 </head>
 
 <body background="file:///Users/Agrawal/Downloads/jeremy-thomas-99326-unsplash.jpg" > 
-      
-   
-    
      
-    <p id="lines" >  <img src="https://i.imgur.com/jPzlApf.png"/> 
-        </p>  
     
     <table>
-        <tr> <td id=find >Find out your weight on the different planets! </td> 
+        
+         <tr> <td colspan="2" id=heading >DOES THE WEIGHING MACHINE REALLY SHOW YOUR WEIGHT? </td> 
+        </tr>
+           <tr> <td colspan="2" id=No >No! It actually shows your MASS. </td> 
+        </tr>
+        
+         <tr> <td colspan="2" id=grav> Your weight is simply mass multiplied by the planet's gravitational field strength. </td> 
+        </tr>
+        
+        <tr> <td colspan="2" id=find > Use our Weight Calculator Tool to find out your weight on different planets! </td> 
         </tr>
     
  
         
-        <tr> <td id=ask> Input your mass: </td> </tr>
+        <tr > <td colspan="2" id=ask> Input your mass: </td> </tr>
        
-        <tr> <td id=massunit > <input id="massInput" onchange="Send()" type="number" /> kg </td>  </tr>
+        <tr> <td colspan="2" id=massunit > <input id="massInput" onchange="Send()" type="number" /> kg </td>  </tr>
+    
         
-        <tr> <td id=descript>  The number measured on the weighing scale is actually your mass! Now find out what your weight actually is. P.S. It's different on all the planets! </td> </tr>
+        <tr> 
+            
+            <td width="150px" >
+                <ul> 
+                <li> <img id="Mercury" src= "https://i.imgur.com/uSVVkt7.png"/> </li>
+                 <li> <img id="Venus" src= "https://i.imgur.com/KdHovQ5.png"/> </li>
+                 <li> <img id="Earth" src= "https://i.imgur.com/0oHcxf3.png"/> </li>
+                 <li> <img id="Mars" src= "https://i.imgur.com/5y2C07P.png"/> </li>
+                 <li> <img id="Jupiter" src= "https://i.imgur.com/BJoTbVy.png"/> </li>
+                 <li> <img id="Saturn" src= "https://i.imgur.com/9JB4Y6I.png"/> </li>
+                 <li> <img id="Uranus" src= "https://i.imgur.com/gjLP1tJ.png"/> </li>
+                 <li> <img id="Neptune" src= "https://i.imgur.com/DuVtPwI.png"/> </li>
+                </ul>  
+            
+            </td>
+            
+            <td> 
+<ul class="styled" id="result" > </ul>  </td>  </tr>
         
-        <tr> <td> <ul id="result" > </ul> </td>  </tr>
+        <tr>
+
+<td id="cur" colspan ="2"> 
+    <p id=pass> Curiosity Qn: Can you guess the planet with the highest gravitational field strength? </p>
+  <input id="fs" type="text">
+
+  
+    <input id="enterb" type="button" value="Enter" onClick="show()">
+  <br><br>
+    <div id="okay"> </div>
+    <br>
+
+    </td>
+        
+        </tr>
         
     
     </table>
     
+    <script>
+      function show()
+      {
+      var input = document.getElementById("fs").value;
+      if(input === "saturn"){
+        document.getElementById("okay").innerHTML = "That's right, it's where you would feel the heaviest!";
+      }
+      else{
+        document.getElementById("okay").innerHTML = "Try Again!";}
+      }
+  </script>
+    
     
     <script>
-        var planets = ["Mercury","Venus","Earth", "Mars", "Jupiter", "Saturn","Uranus", "Neptune", "Pluto"];
-        var gravity = [3.59, 8.87, 9.81, 1.62, 3.77, 25.95, 11.08, 10.67, 14.07, 0.42];
+        var planets = ["Mercury","Venus","Earth", "Mars", "Jupiter", "Saturn","Uranus", "Neptune"]; 
+
+        var gravity = [4, 8.9, 10, 1.6, 3.8, 26, 11, 10.7];
         
         var list = document.getElementById("result");
         
@@ -49,13 +98,21 @@
                 {
                     var weight = Math.round(gravity[i]*mass);
                     var entry = document.createElement('li');
-                    entry.appendChild(document.createTextNode(planets[i]+": "+ weight + " N" ));
+                    entry.appendChild(document.createTextNode
+                    (planets[i]+": "+ "- " + weight + " N" ));
+        //Need to put the repsective images before planet name// 
                     list.appendChild(entry);
                 }
+                 
             }
                 
         }
+        
+
     </script>
+    
+    
+
  
 </body>
 
